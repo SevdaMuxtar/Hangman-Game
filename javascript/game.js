@@ -30,7 +30,7 @@ function displayWord(){
 
     const innerWord = wordE1.innerText.replace(/\n/g, "");
     if(innerWord === selectedWord){
-        finalMessage.innerText = "Congratuulations! You won! ";
+        finalMessage.innerText = "Congratuulations! You won! :) ";
         popup.style.display="flex";
     }
 }
@@ -44,6 +44,9 @@ function updateWrongLetterE1(){
         const errors = wrongLetters.length;
 
         if(index < errors){
+            part.style.display = "block"
+        }
+        else{
             part.style.display = "none"
         }
     });
